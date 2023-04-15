@@ -1,5 +1,6 @@
-import { client } from '../../../libs/client';
-import { Blog } from '../../../models/Blog';
+import { Suspense } from 'react';
+import { Content, getContent } from '../../../components/server/Content';
+import Loading from '../../../components/client/Loading';
 
 export const revalidate = 60;
 
@@ -9,33 +10,20 @@ type Props = {
   };
 };
 
-async function getContent(contentId: string) {
-  const result = await client.get<Blog>({
-    endpoint: 'blogs',
-    contentId,
-  });
-  return result;
-}
-
 export async function generateMetadata({ params }: Props) {
   const content = await getContent(params.id);
-
   return {
     title: content.title,
   };
 }
 
 export default async function Page({ params }: Props) {
-  const content = await getContent(params.id);
-
   return (
     <div>
-      <h1>{content.title}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${content.content}`,
-        }}
-      />
+      <Suspense fallback={<Loading />}>
+        {/* @ts-expect-error Server Component */}
+        <Content id={params.id} />
+      </Suspense>
     </div>
   );
 }

@@ -5,11 +5,11 @@ import { Blog, Blogs } from '../models/Blog';
 async function getBlogTitles() {
   const result = await client.get<Blogs>({
     endpoint: 'blogs',
+    queries: {
+      fields: 'id,title',
+    },
   });
-  return result.contents.map((content: Blog) => ({
-    id: content.id,
-    title: content.title,
-  }));
+  return result.contents;
 }
 
 export default async function Page() {

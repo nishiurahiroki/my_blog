@@ -1,4 +1,3 @@
-import { client } from '../../libs/client';
 import { Blog } from '../../models/Blog';
 
 export type Props = {
@@ -6,10 +5,8 @@ export type Props = {
 };
 
 export async function getContent(contentId: string) {
-  const result = await client.get<Blog>({
-    endpoint: 'blogs',
-    contentId,
-  });
+  const response = await fetch(`${process.env.API_HOST}/blog?id=${contentId}`);
+  const result: Blog = await response.json();
   return result;
 }
 

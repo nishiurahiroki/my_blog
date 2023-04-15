@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { client } from '../libs/client';
-import { Blog, Blogs } from '../models/Blog';
+import { Blogs } from '../models/Blog';
 
 async function getBlogTitles() {
   const result = await client.get<Blogs>({

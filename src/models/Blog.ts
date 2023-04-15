@@ -13,7 +13,7 @@ export type Blog = {
   title: string;
   content: string;
   eyecatch?: EyeCache[];
-  category?: string[];
+  category?: Category[];
 };
 
 export type EyeCache = {

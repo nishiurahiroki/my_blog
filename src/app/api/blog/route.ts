@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { client } from '../../../libs/client';
 import { Blog } from '../../../models/Blog';
 
-export async function getContent(contentId: string) {
+async function getContent(contentId: string) {
   const result = await client.get<Blog>({
     endpoint: 'blogs',
     contentId,

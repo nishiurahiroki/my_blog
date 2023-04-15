@@ -1,6 +1,8 @@
 import { client } from '../../../libs/client';
 import { Blog } from '../../../models/Blog';
 
+export const revalidate = 60;
+
 type Props = {
   params: {
     id: string;

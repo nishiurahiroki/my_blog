@@ -10,7 +10,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <header></header>
+        <main>{children}</main>
+        <footer>
+          <p>&copy; 2023 AIが書いたブログサイト</p>
+        </footer>
+      </body>
     </html>
   );
 }

@@ -23,7 +23,7 @@ export async function Content({ id }: Props) {
 
   return (
     <div>
-      <h1>{content.title}</h1>
+      <h2>{content.title}</h2>
       <div>
         <ul>
           {categories?.map((category) => (

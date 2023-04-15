@@ -17,6 +17,7 @@ export default async function Page() {
 
   return (
     <div>
+      <h2>AIが書いたブログサイト</h2>
       {titles.map((title) => (
         <div key={title.id}>
           <Link href={`/content/${title.id}`}>{title.title}</Link>

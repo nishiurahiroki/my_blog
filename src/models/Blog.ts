@@ -12,6 +12,21 @@ export type Blog = {
   revisedAt: string;
   title: string;
   content: string;
-  eyecatch?: string[];
+  eyecatch?: EyeCache[];
   category?: string[];
+};
+
+export type EyeCache = {
+  url: string;
+  height: number;
+  width: number;
+};
+
+export type Category = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  name: string;
 };

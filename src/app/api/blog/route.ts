@@ -1,5 +1,3 @@
-import { title } from 'process';
-import { title } from 'process';
 import { NextRequest, NextResponse } from 'next/server';
 import { headers } from 'next/headers';
 import { client } from '../../../libs/client';

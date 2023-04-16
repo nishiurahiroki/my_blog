@@ -1,3 +1,5 @@
+import styles from './styles.module.css';
+
 export const metadata = {
   title: 'My blog.',
   description: 'My blog site.',
@@ -10,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>
+      <body className={styles.body}>
         <header></header>
         <main>{children}</main>
         <footer>

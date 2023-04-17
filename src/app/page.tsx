@@ -18,7 +18,7 @@ export default async function Page() {
   return (
     <div>
       <header>
-        <h2>AIが書いた怪談ブログ</h2>
+        <h2>AIが書いた怪談</h2>
       </header>
 
       <div>

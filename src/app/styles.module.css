@@ -3,3 +3,17 @@
   color: #fff;
   font-family: sans-serif;
 }
+
+.container {
+  margin: 1vw;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article a {
+  text-decoration: none;
+}

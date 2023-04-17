@@ -1,8 +1,16 @@
 import styles from './styles.module.css';
 
 export const metadata = {
-  title: 'My blog.',
-  description: 'My blog site.',
+  title: 'AIが書いた怪談',
+  description: 'AIが書いた怪談を更新',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  keyword: 'AI、chat-GPT、怪談',
+  themeColor: 'black',
+  keywords: ['index', 'follow'],
 };
 
 export default function RootLayout({

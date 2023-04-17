@@ -35,7 +35,7 @@ export async function Content({ id }: Props) {
       </div>
       <div
         dangerouslySetInnerHTML={{
-          __html: `${content.content}`,
+          __html: `${content.content.replaceAll('¥r', '<br/>')}`,
         }}
       />
     </div>

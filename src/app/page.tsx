@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { client } from '../libs/client';
 import { Blogs } from '../models/Blog';
 
-import styles from './styles.module.css';
-
 async function getBlogTitles() {
   const result = await client.get<Blogs>({
     endpoint: 'blogs',
@@ -18,14 +16,14 @@ export default async function Page() {
   const titles = await getBlogTitles();
 
   return (
-    <div className={styles.container}>
+    <div>
       <header>
         <h2>AIが書いた怪談</h2>
       </header>
 
-      <div className={styles.articles}>
+      <div>
         {titles.map((title) => (
-          <div key={title.id} className={styles.article}>
+          <div key={title.id}>
             <Link href={`/content/${title.id}`}>{title.title}</Link>
           </div>
         ))}

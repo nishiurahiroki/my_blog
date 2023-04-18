@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import '../styles/global.css';
 
 export const metadata = {
   title: 'AIが書いた怪談',
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={styles.body}>
+      <body>
         <header></header>
         <main>{children}</main>
         <footer>

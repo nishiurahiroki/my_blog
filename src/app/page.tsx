@@ -16,12 +16,9 @@ export default async function Page() {
   const titles = await getBlogTitles();
 
   return (
-    <div>
-      <header>
-        <h2>AIが書いた怪談</h2>
-      </header>
-
-      <div>
+    <div className="pt-6">
+      <label className="text-4xl font-sans">AIが書いた怪談ブログ</label>
+      <div className="grid gap-4 pt-8">
         {titles.map((title) => (
           <div key={title.id}>
             <Link href={`/content/${title.id}`}>{title.title}</Link>

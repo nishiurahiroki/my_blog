@@ -2,7 +2,7 @@ import '../styles/global.css';
 
 export const metadata = {
   title: 'AIが書いた怪談',
-  description: 'AIが書いた怪談を更新',
+  description: 'AIが書いた怪談を掲載',
   viewport: {
     width: 'device-width',
     initialScale: 1,
@@ -20,11 +20,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>
-        <header></header>
+      <body className="bg-slate-950 text-white md:container md:mx-8">
         <main>{children}</main>
-        <footer>
-          <p>&copy; 2023 AIが書いたブログサイト</p>
+
+        <footer className="bg-slate-950 rounded-lg shadow dark:bg-gray-800">
+          <div className="w-full max-w-screen-xl pt-8 md:flex md:items-center md:justify-between">
+            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              © 2023 AIが書いた怪談ブログ . All Rights Reserved.
+            </span>
+          </div>
         </footer>
       </body>
     </html>

@@ -18,9 +18,9 @@ export default async function Page() {
   return (
     <div className="pt-6">
       <h2 className="text-4xl font-serif">AIが書いた怪談ブログ</h2>
-      <h6 className="text-sm text-gray-300 font-serif pt-3">
+      <h3 className="text-sm text-gray-300 font-serif pt-3">
         毎日23~24時の間に自動更新。AI(Chat-GPT3.5)が書いた怪談を掲載します。
-      </h6>
+      </h3>
       <div className="grid gap-4 pt-8">
         {titles.map((title) => (
           <Link href={`/content/${title.id}`} key={title.id}>

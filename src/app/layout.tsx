@@ -2,7 +2,7 @@ import '../styles/global.css';
 
 export const metadata = {
   title: 'AIが書いた怪談',
-  description: 'AIが書いた怪談を掲載',
+  description: 'AIが書いた怪談を掲載します。毎日深夜に更新します。',
   viewport: {
     width: 'device-width',
     initialScale: 1,

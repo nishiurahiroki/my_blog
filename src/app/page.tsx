@@ -31,7 +31,7 @@ export default async function Page() {
               <h5 className="mb-1 text-xl font-bold tracking-tight text-white">
                 {title.title}
               </h5>
-              <p className="font-normal text-sm text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis pt-1 w-[500px]">
+              <p className="font-normal text-sm text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis pt-1 max-w-xs">
                 {title.content
                   .replaceAll('¥r¥r', '')
                   .replaceAll('¥r¥n', '')

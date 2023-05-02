@@ -14,7 +14,7 @@ async function getBlogTitles() {
 
 export default async function Page() {
   const titles = await getBlogTitles();
-  console.dir(titles);
+
   return (
     <div className="pt-6">
       <h2 className="text-4xl font-serif">AIが書いた怪談ブログ</h2>
